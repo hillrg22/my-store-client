@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 
 import ProductCard from './ProductCard'
+import styles from './products-list.module.scss'
 
 class Products extends Component {
   state= {
@@ -23,13 +24,22 @@ class Products extends Component {
 
   render(){
     return(
-      <div className='App'>
+      <div className={styles.container}>
         <header>
           <h1>Welcome to Products List!</h1>
         </header>
-        {this.state.products.map(product => {
-          return <ProductCard />
-        })}
+        <div className={styles.productsContainer}>
+          {this.state.products.map(product => {
+            return (
+              <ProductCard
+                key={product.id}
+                name={product.name}
+                description={product.description}
+                img_url={product.img_url}
+                price={product.price}
+              />)
+          })}
+        </div>
       </div>
     )
   }

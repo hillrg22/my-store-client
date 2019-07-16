@@ -1,8 +1,11 @@
 import React from 'react'
+import Card from '../../Card'
 
 const ProductCard = () => {
   return (
-    <h2>Hi from Product Card</h2>
+    <Card>
+      <h2>Hi from Product Card</h2>
+    </Card>
   )
 
 }
