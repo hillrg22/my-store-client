@@ -1,8 +1,8 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.scss';
+import React from 'react'
+import logo from './logo.svg'
+import './App.scss'
 
-import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
 import Home from './components/Home'
 import Navigation from './components/Navigation'
@@ -18,7 +18,7 @@ function App() {
       </Switch>
 
     </Router>
-  );
+  )
 }
 
-export default App;
+export default App

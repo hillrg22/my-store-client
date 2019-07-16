@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 
+import ProductCard from './ProductCard'
 
 class Products extends Component {
   state= {
@@ -10,9 +11,9 @@ class Products extends Component {
   componentDidMount() {
     fetch('http://localhost:4000/api/products')
       .then(res => res.json())
-      .then(products => {
+      .then(data => {
         this.setState({
-          products
+          products: data.products
         })
       })
       .catch(error => {
@@ -26,6 +27,9 @@ class Products extends Component {
         <header>
           <h1>Welcome to Products List!</h1>
         </header>
+        {this.state.products.map(product => {
+          return <ProductCard />
+        })}
       </div>
     )
   }
