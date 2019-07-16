@@ -37,6 +37,7 @@ class Products extends Component {
                 description={product.description}
                 img_url={product.img_url}
                 price={product.price}
+                id={product.id}
               />)
           })}
         </div>
