@@ -1,10 +1,12 @@
 import React from 'react'
 import Card from '../../Card'
 
-const ProductCard = () => {
+const ProductCard = ({name, img_url, price, description}) => {
   return (
     <Card>
-      <h2>Hi from Product Card</h2>
+      <h2>{name}</h2>
+      <img src={img_url} alt="product" />
+      <h3> Price: ${price/100}.00 </h3>
     </Card>
   )
 
