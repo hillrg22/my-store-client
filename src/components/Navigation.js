@@ -10,6 +10,7 @@ const Navigation = () => {
     <nav>
       <Link to='/'>Home</Link>
       <Link to='/products'>Products</Link>
+      {isAuthenticated && <Link to='/profile'>Profile</Link>}
       {!isAuthenticated && (
         <button
           onClick={() =>
@@ -19,7 +20,7 @@ const Navigation = () => {
          Log in
         </button>
       )}
-     
+
       {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
     </nav>)
 }
