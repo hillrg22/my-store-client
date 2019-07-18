@@ -11,6 +11,7 @@ import PaymentSuccess from './components/PaymentSuccess'
 import PaymentCancel from './components/PaymentCancel'
 import Profile from './components/Profile'
 import PrivateRoute from './components/PrivateRoute'
+import ExternalApi from './components/ExternalApi'
 
 function App() {
   return (
@@ -21,7 +22,9 @@ function App() {
         <Route exact path='/products' component={ProductsList} />
         <Route path='/products/:id' component={ProductDetail} />
         <Route path='/success' component={PaymentSuccess} />
+        <Route path='/cancel' component={PaymentCancel} />
         <PrivateRoute path="/profile" component={Profile} />
+        <PrivateRoute path='/external' component={ExternalApi} />
       </Switch>
 
     </Router>

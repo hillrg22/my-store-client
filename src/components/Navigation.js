@@ -10,6 +10,7 @@ const Navigation = () => {
     <nav>
       <Link to='/'>Home</Link>
       <Link to='/products'>Products</Link>
+      <Link to='/external'>Test</Link>
       {isAuthenticated && <Link to='/profile'>Profile</Link>}
       {!isAuthenticated && (
         <button
